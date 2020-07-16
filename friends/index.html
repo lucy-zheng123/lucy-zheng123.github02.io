@@ -108,7 +108,7 @@
     
     <a href="/contact" class="waves-effect waves-light">
       
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      <i class="fas fa-comment" style="zoom: 0.6;"></i>
       
       <span>留言板</span>
     </a>
@@ -211,7 +211,7 @@
 	  
 		<a href="/contact" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-comments"></i>
+			    <i class="fa-fw fas fa-comment"></i>
 			
 			留言板
 		</a>
@@ -616,7 +616,25 @@
         </div>
         <div class="card">
             <div class="card-content">
-                
+                <script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
         </div>
         <div class="card">
@@ -731,7 +749,7 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/lucy-zheng123?tab=repositories" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
@@ -841,6 +859,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
